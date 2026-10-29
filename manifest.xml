@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>bfcdbf3e-b664-4722-be3d-ee13fae01b07</Id>
-  <Version>1.0.0.0</Version>
+  <Version>1.2.0.0</Version>
   <ProviderName>unbaiat</ProviderName>
   <DefaultLocale>ro-RO</DefaultLocale>
-  <DisplayName DefaultValue="I R Coder"/>
-  <Description DefaultValue="Corectează gramatical și rescrie după instrucțiuni textul selectat în Word, folosind OpenAI.">
-    <Override Locale="en-US" Value="Proofread and rewrite selected text in Word with OpenAI."/>
-    <Override Locale="fr-FR" Value="Corrigez et réécrivez le texte sélectionné dans Word avec OpenAI."/>
-    <Override Locale="it-IT" Value="Correggi e riscrivi il testo selezionato in Word con OpenAI."/>
-    <Override Locale="es-ES" Value="Corrige y reescribe el texto seleccionado en Word con OpenAI."/>
+  <DisplayName DefaultValue="ClipAI_Word"/>
+  <Description DefaultValue="Corectează și rescrie textul selectat în Word cu OpenAI, Claude, Gemini sau Grok. Necesită propria ta cheie API; furnizorul ales facturează utilizarea.">
+    <Override Locale="en-US" Value="Proofread and rewrite selected text in Word with OpenAI, Claude, Gemini, or Grok. Requires your own API key; the provider you choose bills the usage."/>
+    <Override Locale="fr-FR" Value="Corrigez et réécrivez le texte sélectionné dans Word avec OpenAI, Claude, Gemini ou Grok. Nécessite votre propre clé API ; le fournisseur choisi facture l’utilisation."/>
+    <Override Locale="it-IT" Value="Correggi e riscrivi il testo selezionato in Word con OpenAI, Claude, Gemini o Grok. Richiede una chiave API personale; il fornitore scelto addebita l’utilizzo."/>
+    <Override Locale="es-ES" Value="Corrige y reescribe el texto seleccionado en Word con OpenAI, Claude, Gemini o Grok. Requiere tu propia clave API; el proveedor elegido factura el uso."/>
   </Description>
-  <IconUrl DefaultValue="https://unbaiat.github.io/ircoder/assets/iaw-icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://unbaiat.github.io/ircoder/assets/iaw-icon-64.png"/>
-  <SupportUrl DefaultValue="https://github.com/unbaiat/ircoder"/>
+  <IconUrl DefaultValue="https://unbaiat.github.io/ircoder/assets/clipai-bb-icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://unbaiat.github.io/ircoder/assets/clipai-bb-icon-64.png"/>
+  <SupportUrl DefaultValue="https://unbaiat.github.io/ircoder/support.html"/>
   <Hosts>
     <Host Name="Document"/>
   </Hosts>
@@ -41,7 +41,12 @@
                 <Label resid="CommandsGroup.Label"/>
                 <Icon>
                   <bt:Image size="16" resid="Icon.16x16"/>
+                  <bt:Image size="20" resid="Icon.20x20"/>
+                  <bt:Image size="24" resid="Icon.24x24"/>
                   <bt:Image size="32" resid="Icon.32x32"/>
+                  <bt:Image size="40" resid="Icon.40x40"/>
+                  <bt:Image size="48" resid="Icon.48x48"/>
+                  <bt:Image size="64" resid="Icon.64x64"/>
                   <bt:Image size="80" resid="Icon.80x80"/>
                 </Icon>
                 <Control xsi:type="Button" id="TaskpaneButton">
@@ -52,7 +57,12 @@
                   </Supertip>
                   <Icon>
                     <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="20" resid="Icon.20x20"/>
+                    <bt:Image size="24" resid="Icon.24x24"/>
                     <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="40" resid="Icon.40x40"/>
+                    <bt:Image size="48" resid="Icon.48x48"/>
+                    <bt:Image size="64" resid="Icon.64x64"/>
                     <bt:Image size="80" resid="Icon.80x80"/>
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
@@ -68,36 +78,41 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://unbaiat.github.io/ircoder/assets/iaw-icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://unbaiat.github.io/ircoder/assets/iaw-icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://unbaiat.github.io/ircoder/assets/iaw-icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://unbaiat.github.io/ircoder/assets/clipai-bb-icon-16.png"/>
+        <bt:Image id="Icon.20x20" DefaultValue="https://unbaiat.github.io/ircoder/assets/clipai-bb-icon-20.png"/>
+        <bt:Image id="Icon.24x24" DefaultValue="https://unbaiat.github.io/ircoder/assets/clipai-bb-icon-24.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://unbaiat.github.io/ircoder/assets/clipai-bb-icon-32.png"/>
+        <bt:Image id="Icon.40x40" DefaultValue="https://unbaiat.github.io/ircoder/assets/clipai-bb-icon-40.png"/>
+        <bt:Image id="Icon.48x48" DefaultValue="https://unbaiat.github.io/ircoder/assets/clipai-bb-icon-48.png"/>
+        <bt:Image id="Icon.64x64" DefaultValue="https://unbaiat.github.io/ircoder/assets/clipai-bb-icon-64.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://unbaiat.github.io/ircoder/assets/clipai-bb-icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://unbaiat.github.io/ircoder/support.html"/>
         <bt:Url id="Taskpane.Url" DefaultValue="https://unbaiat.github.io/ircoder/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GetStarted.Title" DefaultValue="I R Coder este gata de folosit">
-          <bt:Override Locale="en-US" Value="I R Coder is ready"/>
-          <bt:Override Locale="fr-FR" Value="I R Coder est prêt"/>
-          <bt:Override Locale="it-IT" Value="I R Coder è pronto"/>
-          <bt:Override Locale="es-ES" Value="I R Coder está listo"/>
+        <bt:String id="GetStarted.Title" DefaultValue="ClipAI_Word este gata de folosit">
+          <bt:Override Locale="en-US" Value="ClipAI_Word is ready"/>
+          <bt:Override Locale="fr-FR" Value="ClipAI_Word est prêt"/>
+          <bt:Override Locale="it-IT" Value="ClipAI_Word è pronto"/>
+          <bt:Override Locale="es-ES" Value="ClipAI_Word está listo"/>
         </bt:String>
-        <bt:String id="CommandsGroup.Label" DefaultValue="I R Coder"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="I R Coder"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="ClipAI"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="ClipAI"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Deschide fila Pornire și apasă butonul I R Coder pentru a corecta sau rescrie textul selectat.">
-          <bt:Override Locale="en-US" Value="Go to the Home tab and select I R Coder to proofread or rewrite the selected text."/>
-          <bt:Override Locale="fr-FR" Value="Ouvrez l’onglet Accueil et sélectionnez I R Coder pour corriger ou réécrire le texte sélectionné."/>
-          <bt:Override Locale="it-IT" Value="Apri la scheda Home e seleziona I R Coder per correggere o riscrivere il testo selezionato."/>
-          <bt:Override Locale="es-ES" Value="Ve a la pestaña Inicio y selecciona I R Coder para corregir o reescribir el texto seleccionado."/>
+        <bt:String id="GetStarted.Description" DefaultValue="Deschide fila Pornire și apasă butonul ClipAI pentru a corecta sau rescrie textul selectat.">
+          <bt:Override Locale="en-US" Value="Go to the Home tab and select ClipAI to proofread or rewrite the selected text."/>
+          <bt:Override Locale="fr-FR" Value="Ouvrez l’onglet Accueil et sélectionnez ClipAI pour corriger ou réécrire le texte sélectionné."/>
+          <bt:Override Locale="it-IT" Value="Apri la scheda Home e seleziona ClipAI per correggere o riscrivere il testo selezionato."/>
+          <bt:Override Locale="es-ES" Value="Ve a la pestaña Inicio y selecciona ClipAI para corregir o reescribir el texto seleccionado."/>
         </bt:String>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Deschide panoul I R Coder pentru corectură și rescriere cu OpenAI.">
-          <bt:Override Locale="en-US" Value="Open I R Coder to proofread and rewrite text with OpenAI."/>
-          <bt:Override Locale="fr-FR" Value="Ouvrir I R Coder pour corriger et réécrire du texte avec OpenAI."/>
-          <bt:Override Locale="it-IT" Value="Apri I R Coder per correggere e riscrivere il testo con OpenAI."/>
-          <bt:Override Locale="es-ES" Value="Abre I R Coder para corregir y reescribir texto con OpenAI."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Deschide panoul ClipAI pentru corectură și rescriere cu inteligență artificială.">
+          <bt:Override Locale="en-US" Value="Open ClipAI to proofread and rewrite text with AI."/>
+          <bt:Override Locale="fr-FR" Value="Ouvrir ClipAI pour corriger et réécrire du texte avec l’IA."/>
+          <bt:Override Locale="it-IT" Value="Apri ClipAI per correggere e riscrivere il testo con l’IA."/>
+          <bt:Override Locale="es-ES" Value="Abre ClipAI para corregir y reescribir texto con IA."/>
         </bt:String>
       </bt:LongStrings>
     </Resources>

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Help and support
+    url: https://unbaiat.github.io/ircoder/support.html
+    about: Installation, setup, and troubleshooting.
+  - name: Privacy policy
+    url: https://unbaiat.github.io/ircoder/privacy.html
+    about: What happens to your text and API keys.

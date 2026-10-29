@@ -1,0 +1,40 @@
+name: Report a problem
+description: Something in ClipAI_Word doesn't work as expected.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Don't paste API keys or confidential document content.** The help page lists common fixes: https://unbaiat.github.io/ircoder/support.html
+  - type: input
+    id: version
+    attributes:
+      label: ClipAI_Word version
+      description: Settings › Help and about.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Word
+      options: [Windows, Mac, Word on the web, iPad]
+    validations:
+      required: true
+  - type: dropdown
+    id: provider
+    attributes:
+      label: AI provider
+      options: [OpenAI, Claude, Gemini, Grok, Not related to a provider]
+  - type: textarea
+    id: steps
+    attributes:
+      label: What did you do, and what happened?
+      description: Include the exact error message, if any.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confidentiality
+    attributes:
+      label: Before you submit
+      options:
+        - label: This report contains no API keys and no confidential content.
+          required: true

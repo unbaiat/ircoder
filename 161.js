@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkclipai_word||=[]).push([[161],{161(t,e,i){var n=i(657);function o(t){return new Proxy({},{get(e,i){if("symbol"!=typeof i)throw new n.pJ(`\`${t}.${i}\` is not available in this environment; it needs a Node.js-compatible runtime`)}})}const s=o("fs"),a=o("path");i.d(e,["fs",0,s,"path",0,a])}}]);

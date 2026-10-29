@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Privacy policy · ClipAI_Word</title>
+    <link rel="stylesheet" href="pages.css" />
+    <link rel="icon" href="assets/clipai-bb-icon-32.png" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="brand" href="support.html"><img src="assets/clipai-bb-icon-64.png" alt="" width="32" height="32" />ClipAI_Word</a>
+            <nav class="site-nav" aria-label="ClipAI_Word">
+                <a href="support.html">Help and support</a>
+                <a href="privacy.html" aria-current="page">Privacy policy</a>
+                <a href="terms.html">Terms of use</a>
+            </nav>
+            <a class="language-switch" href="privacy-ro.html" hreflang="ro" lang="ro">Română</a>
+        </div>
+    </header>
+
+    <main>
+        <h1>Privacy policy</h1>
+        <p class="updated">Effective October 29, 2026</p>
+
+        <div class="summary">
+            <ul>
+                <li>ClipAI_Word has no server. Its publisher does not collect, receive, store, or sell your personal data or the content of your documents.</li>
+                <li>The text you select is sent only when you run a command, directly from your device to the AI provider you chose.</li>
+                <li>Your API keys and settings stay on your device.</li>
+            </ul>
+        </div>
+
+        <h2>Who we are</h2>
+        <p>ClipAI_Word is a Microsoft Word add-in published by unbaiat (“we”). This policy explains what happens to your data when you use it. Questions are welcome on our <a href="https://github.com/unbaiat/ircoder/issues" rel="noopener noreferrer">support page on GitHub</a>.</p>
+
+        <h2>What the add-in processes</h2>
+        <h3>Selected text and instructions</h3>
+        <p>When you select <strong>Proofread selection</strong> or <strong>Apply instructions</strong>, the paragraphs you selected in Word, and for rewriting also your instructions, are sent over an encrypted HTTPS connection to the provider you chose: OpenAI, Anthropic (Claude), Google (Gemini), or xAI (Grok). The provider’s reply is written back into your document. ClipAI_Word does not keep a copy. Nothing is sent while you only read, select, or type in your document.</p>
+
+        <h3>API keys</h3>
+        <p>The API keys you save are kept in the add-in’s local storage on your device (the web storage Office gives the add-in), without additional encryption, and are sent only to the provider that issued them, with each request. Anyone who can sign in to your device account could read them. You can delete a key at any time in <strong>Settings › Remove</strong>.</p>
+
+        <h3>Settings</h3>
+        <p>The chosen provider, model, reasoning effort, interface language, and whether you have read the welcome notice are stored in the same local storage. When you save or test a key, the add-in asks that provider for the list of models available to the key.</p>
+
+        <h2>AI providers</h2>
+        <p>Each provider processes the text you send under its own terms and privacy policy, under your account with that provider. How long the provider keeps the data, whether it monitors it for abuse, and whether it uses it to train or improve its models depend on the provider and your account type. For example, under the Gemini API terms, content sent through unpaid services may be read by human reviewers and used to improve Google products. Don’t send confidential or personal data under terms you haven’t reviewed.</p>
+        <ul>
+            <li>OpenAI: <a href="https://openai.com/policies/privacy-policy/" rel="noopener noreferrer">Privacy policy</a></li>
+            <li>Anthropic (Claude): <a href="https://www.anthropic.com/legal/privacy" rel="noopener noreferrer">Privacy policy</a></li>
+            <li>Google (Gemini): <a href="https://ai.google.dev/gemini-api/terms" rel="noopener noreferrer">Gemini API terms</a> and <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Privacy policy</a></li>
+            <li>xAI (Grok): <a href="https://x.ai/legal/privacy-policy" rel="noopener noreferrer">Privacy policy</a></li>
+        </ul>
+
+        <h2>Other services</h2>
+        <ul>
+            <li><strong>Hosting.</strong> The add-in’s files are served by GitHub Pages. GitHub may record technical data, such as your IP address, when your device downloads them. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub General Privacy Statement</a>.</li>
+            <li><strong>Microsoft.</strong> Word loads the Office JavaScript library from Microsoft. See the <a href="https://www.microsoft.com/privacy/privacystatement" rel="noopener noreferrer">Microsoft Privacy Statement</a>.</li>
+            <li><strong>Links you open.</strong> Provider consoles, GitHub, and Buy Me a Coffee open in your browser and are covered by those sites’ own policies.</li>
+        </ul>
+
+        <h2>What ClipAI_Word doesn’t do</h2>
+        <p>No analytics, telemetry, advertising, cookies, or tracking. No user accounts. We don’t sell or share data, because we never receive it.</p>
+
+        <h2>Security</h2>
+        <p>All connections use HTTPS. The add-in can connect only to the four provider APIs and to Microsoft’s Office library, which limits where data can go even if a page were compromised. We recommend a dedicated API key with a spending limit, and revoking the key in your provider account if you think it was exposed.</p>
+
+        <h2>Your choices</h2>
+        <ul>
+            <li>Remove saved keys in <strong>Settings</strong>.</li>
+            <li>Uninstall the add-in, or clear the Office web cache, to delete everything it stored on your device.</li>
+            <li>Because we don’t receive your data, we can’t access, correct, or delete it. For text you sent to a provider, contact that provider.</li>
+        </ul>
+
+        <h2>Children</h2>
+        <p>ClipAI_Word is not directed at children. AI providers set their own minimum ages; for example, the Gemini API requires users to be 18 or older.</p>
+
+        <h2>Changes</h2>
+        <p>We will post changes on this page and update the effective date. If a change affects how your data is handled, the add-in will ask you to review its notice again.</p>
+
+        <h2>Contact</h2>
+        <p>Open an issue at <a href="https://github.com/unbaiat/ircoder/issues" rel="noopener noreferrer">github.com/unbaiat/ircoder/issues</a>. Please don’t include API keys or confidential document content.</p>
+    </main>
+
+    <footer class="site-footer">
+        ClipAI_Word is independent and is not affiliated with or endorsed by Microsoft, OpenAI, Anthropic, Google, or xAI.
+    </footer>
+</body>
+
+</html>

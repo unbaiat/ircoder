@@ -1,0 +1,46 @@
+name: Report inappropriate AI content
+description: ClipAI_Word produced harmful, offensive, or inappropriate text.
+title: "[AI content] "
+labels: ["ai-content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting this. We review every report.
+        **Don't paste API keys or confidential document content.** Describe the problem, or use a short, non-sensitive example.
+  - type: dropdown
+    id: provider
+    attributes:
+      label: AI provider
+      options: [OpenAI, Claude, Gemini, Grok]
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      description: Shown in Settings, for example claude-opus-5-5.
+  - type: dropdown
+    id: command
+    attributes:
+      label: Command
+      options: [Proofread, Rewrite]
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What was inappropriate?
+    validations:
+      required: true
+  - type: textarea
+    id: instructions
+    attributes:
+      label: Rewrite instructions you used (if any)
+  - type: checkboxes
+    id: confidentiality
+    attributes:
+      label: Before you submit
+      options:
+        - label: This report contains no API keys and no confidential content.
+          required: true

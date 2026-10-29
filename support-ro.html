@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Ajutor și asistență · ClipAI_Word</title>
+    <link rel="stylesheet" href="pages.css" />
+    <link rel="icon" href="assets/clipai-bb-icon-32.png" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="brand" href="support-ro.html"><img src="assets/clipai-bb-icon-64.png" alt="" width="32" height="32" />ClipAI_Word</a>
+            <nav class="site-nav" aria-label="ClipAI_Word">
+                <a href="support-ro.html" aria-current="page">Ajutor și asistență</a>
+                <a href="privacy-ro.html">Politica de confidențialitate</a>
+                <a href="terms-ro.html">Termeni de utilizare</a>
+            </nav>
+            <a class="language-switch" href="support.html" hreflang="en" lang="en">English</a>
+        </div>
+    </header>
+
+    <main>
+        <h1>Ajutor și asistență</h1>
+        <p class="updated">ClipAI_Word 1.2 · Actualizat la 29 octombrie 2026</p>
+
+        <p>ClipAI_Word corectează și rescrie textul pe care îl selectezi în Microsoft Word, cu furnizorul AI ales de tine: OpenAI, Claude (Anthropic), Gemini (Google) sau Grok (xAI). Modifică doar cuvintele care trebuie schimbate, așa că formatarea, notele de subsol, câmpurile și imaginile rămân la locul lor.</p>
+
+        <h2>De ce ai nevoie</h2>
+        <ul>
+            <li>Word pentru Microsoft 365, Word 2021 sau mai nou pe Windows sau Mac, ori Word pe web.</li>
+            <li>O conexiune la internet.</li>
+            <li>O cheie API de la unul dintre furnizori. Furnizorul îți facturează utilizarea, așa că verifică prețurile și setează o limită de cheltuieli.</li>
+        </ul>
+
+        <h2 id="install">Instalare</h2>
+        <h3>Windows</h3>
+        <ol>
+            <li>Descarcă <a href="install-windows.cmd" download>programul de instalare pentru Windows (install-windows.cmd)</a> și deschide-l. Dacă Windows SmartScreen afișează un avertisment, alege <strong>Mai multe informații › Rulează oricum</strong>. Nu ai nevoie de drepturi de administrator.</li>
+            <li>Repornește Word. Apasă <strong>ClipAI</strong> în fila <strong>Pornire</strong>. Dacă nu îl vezi, alege <strong>Pornire › Programe de completare</strong> și selectează ClipAI_Word.</li>
+        </ol>
+        <h3>Mac</h3>
+        <ol>
+            <li>Salvează <a href="manifest.xml" download>manifestul add-in-ului (manifest.xml)</a>.</li>
+            <li>În Finder, alege <strong>Go › Go to Folder</strong>, introdu <code>~/Library/Containers/com.microsoft.Word/Data/Documents/wef</code> (creează folderul <code>wef</code> dacă nu există) și copiază <code>manifest.xml</code> în el.</li>
+            <li>Repornește Word, apoi alege <strong>Pornire › Programe de completare</strong> și selectează ClipAI_Word.</li>
+        </ol>
+        <h3>Word pe web</h3>
+        <ol>
+            <li>Salvează <a href="manifest.xml" download>manifestul add-in-ului (manifest.xml)</a>.</li>
+            <li>Alege <strong>Pornire › Programe de completare › Mai multe programe de completare</strong>, apoi <strong>Programele mele de completare › Încărcați programul meu de completare</strong> și selectează fișierul. Organizația ta poate dezactiva această opțiune.</li>
+        </ol>
+
+        <h2>Primii pași</h2>
+        <ol>
+            <li>Apasă <strong>ClipAI</strong> în fila <strong>Pornire</strong>. Prima dată citește notificarea despre AI și datele tale, apoi apasă <strong>Continuă</strong>.</li>
+            <li>În <strong>Setări</strong>, alege un furnizor și lipește cheia API. Creează o cheie aici:
+                <a href="https://platform.openai.com/api-keys" rel="noopener noreferrer">OpenAI</a>,
+                <a href="https://platform.claude.com/settings/keys" rel="noopener noreferrer">Claude</a>,
+                <a href="https://aistudio.google.com/apikey" rel="noopener noreferrer">Gemini</a>,
+                <a href="https://console.x.ai" rel="noopener noreferrer">Grok</a>.</li>
+            <li>Apasă <strong>Salvează</strong>. ClipAI_Word verifică cheia și încarcă modelele pe care le poate folosi.</li>
+            <li>Opțional, alege modelul și efortul de raționament. Un efort mai mare dă rezultate mai atente, dar mai lente și mai scumpe.</li>
+        </ol>
+        <p>Poți salva chei pentru mai mulți furnizori și poți trece de la unul la altul din lista <strong>Furnizor AI</strong> de deasupra comenzilor.</p>
+
+        <h2>Utilizare</h2>
+        <h3>Corectare</h3>
+        <p>Selectează text în document și apasă <strong>Corectează selecția</strong>. Gramatica, ortografia și punctuația sunt corectate; sensul și stilul rămân la fel.</p>
+        <h3>Rescriere</h3>
+        <p>În fila <strong>Rescriere</strong>, descrie ce vrei sau alege un stil ori o traducere, apoi apasă <strong>Aplică instrucțiunile</strong> (sau Ctrl+Enter, ⌘Enter pe Mac).</p>
+        <h3>Verificare și anulare</h3>
+        <p>Modificările sunt făcute de AI și pot fi greșite. Citește-le înainte să distribui documentul. Ca să anulezi, apasă Ctrl+Z (⌘Z pe Mac). Cât timp o cerere rulează, poți apăsa <strong>Anulează</strong>; documentul nu se modifică.</p>
+        <h3>Ce este protejat</h3>
+        <ul>
+            <li>Modificările care ar suprascrie imagini, controale de conținut, câmpuri, note de subsol sau note de final sunt omise, iar ClipAI_Word îți spune câte au fost omise.</li>
+            <li>Când o rescriere schimbă numărul de paragrafe, selecția nu trebuie să conțină tabele sau elementele de mai sus.</li>
+            <li>Poți prelucra cel mult 4.000 de cuvinte odată.</li>
+        </ul>
+
+        <h2>Rezolvarea problemelor</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Mesaj sau problemă</th>
+                    <th scope="col">Ce poți face</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cheia API nu este validă</td>
+                    <td>Copiază din nou cheia din contul furnizorului, apasă <strong>Modifică</strong> și lipește-o. Verifică dacă cheia aparține furnizorului ales în Setări.</td>
+                </tr>
+                <tr>
+                    <td>Credit epuizat sau limită de cheltuieli atinsă</td>
+                    <td>Adaugă credit sau mărește limita din setările de facturare ale contului la furnizor.</td>
+                </tr>
+                <tr>
+                    <td>Prea multe cereri</td>
+                    <td>Așteaptă un minut și încearcă din nou sau alege un model mai mic.</td>
+                </tr>
+                <tr>
+                    <td>Modelul nu este disponibil sau nu poate fi folosit</td>
+                    <td>Alege alt model în Setări. ClipAI_Word are nevoie de modele care acceptă răspunsuri structurate (JSON).</td>
+                </tr>
+                <tr>
+                    <td>Conectarea a eșuat sau cererea a expirat</td>
+                    <td>Verifică conexiunea. În rețelele de firmă, firewall-ul trebuie să permită <code>api.openai.com</code>, <code>api.anthropic.com</code>, <code>generativelanguage.googleapis.com</code> sau <code>api.x.ai</code>.</td>
+                </tr>
+                <tr>
+                    <td>Textul selectat s-a modificat în timpul procesării</td>
+                    <td>Nu modifica selecția până nu se termină comanda, apoi rulează-o din nou.</td>
+                </tr>
+                <tr>
+                    <td>Răspunsul a fost întrerupt sau selecția este prea lungă</td>
+                    <td>Selectează mai puține paragrafe și rulează comanda pe bucăți.</td>
+                </tr>
+                <tr>
+                    <td>Butonul ClipAI lipsește</td>
+                    <td>Repornește Word. Dacă tot lipsește, instalează din nou add-in-ul.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Confidențialitate și securitate</h2>
+        <p>Textul selectat ajunge direct de pe dispozitivul tău la furnizorul ales, numai când rulezi o comandă. Cheile API rămân pe dispozitiv. ClipAI_Word nu are server și nu colectează date. Citește <a href="privacy-ro.html">politica de confidențialitate</a> și <a href="terms-ro.html">termenii de utilizare</a>.</p>
+
+        <h2>Raportează o problemă sau conținut nepotrivit</h2>
+        <p>Dacă ClipAI_Word a generat text dăunător, ofensator sau nepotrivit ori ceva nu funcționează, <a href="https://github.com/unbaiat/ircoder/issues/new/choose" rel="noopener noreferrer">deschide un tichet pe GitHub</a>. Descrie ce ai făcut și ce furnizor și model ai folosit, dar nu include chei API sau conținut confidențial din documente. Analizăm fiecare raport.</p>
+
+        <h2>Dezinstalare</h2>
+        <ul>
+            <li><strong>Windows:</strong> rulează <a href="uninstall-windows.cmd" download>programul de dezinstalare (uninstall-windows.cmd)</a>, apoi repornește Word.</li>
+            <li><strong>Mac:</strong> șterge <code>manifest.xml</code> din folderul <code>wef</code> de mai sus, apoi repornește Word.</li>
+            <li><strong>Word pe web:</strong> alege <strong>Pornire › Programe de completare › Mai multe programe de completare › Programele mele de completare</strong>, deschide meniul pentru ClipAI_Word și alege <strong>Eliminare</strong>.</li>
+        </ul>
+    </main>
+
+    <footer class="site-footer">
+        ClipAI_Word este independent și nu este afiliat cu sau susținut de Microsoft, OpenAI, Anthropic, Google sau xAI.
+    </footer>
+</body>
+
+</html>

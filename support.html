@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Help and support · ClipAI_Word</title>
+    <link rel="stylesheet" href="pages.css" />
+    <link rel="icon" href="assets/clipai-bb-icon-32.png" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="brand" href="support.html"><img src="assets/clipai-bb-icon-64.png" alt="" width="32" height="32" />ClipAI_Word</a>
+            <nav class="site-nav" aria-label="ClipAI_Word">
+                <a href="support.html" aria-current="page">Help and support</a>
+                <a href="privacy.html">Privacy policy</a>
+                <a href="terms.html">Terms of use</a>
+            </nav>
+            <a class="language-switch" href="support-ro.html" hreflang="ro" lang="ro">Română</a>
+        </div>
+    </header>
+
+    <main>
+        <h1>Help and support</h1>
+        <p class="updated">ClipAI_Word 1.2 · Updated October 29, 2026</p>
+
+        <p>ClipAI_Word proofreads and rewrites the text you select in Microsoft Word, using the AI provider you choose: OpenAI, Claude (Anthropic), Gemini (Google), or Grok (xAI). It changes only the words that need changing, so formatting, footnotes, fields, and pictures stay in place.</p>
+
+        <h2>What you need</h2>
+        <ul>
+            <li>Word for Microsoft 365, Word 2021 or later on Windows or Mac, or Word on the web.</li>
+            <li>An internet connection.</li>
+            <li>An API key from one of the providers. The provider bills its usage to your account, so check its prices and set a spending limit.</li>
+        </ul>
+
+        <h2 id="install">Install</h2>
+        <h3>Windows</h3>
+        <ol>
+            <li>Download the <a href="install-windows.cmd" download>Windows installer (install-windows.cmd)</a> and open it. If Windows SmartScreen warns you, select <strong>More info › Run anyway</strong>. No administrator rights are needed.</li>
+            <li>Restart Word. Select <strong>ClipAI</strong> on the <strong>Home</strong> tab. If you don’t see it, select <strong>Home › Add-ins</strong> and choose ClipAI_Word.</li>
+        </ol>
+        <h3>Mac</h3>
+        <ol>
+            <li>Save the <a href="manifest.xml" download>add-in manifest (manifest.xml)</a>.</li>
+            <li>In Finder, select <strong>Go › Go to Folder</strong>, enter <code>~/Library/Containers/com.microsoft.Word/Data/Documents/wef</code> (create the <code>wef</code> folder if it doesn’t exist), and copy <code>manifest.xml</code> into it.</li>
+            <li>Restart Word, then select <strong>Home › Add-ins</strong> and choose ClipAI_Word.</li>
+        </ol>
+        <h3>Word on the web</h3>
+        <ol>
+            <li>Save the <a href="manifest.xml" download>add-in manifest (manifest.xml)</a>.</li>
+            <li>Select <strong>Home › Add-ins › More Add-ins</strong>, then <strong>My Add-ins › Upload My Add-in</strong>, and choose the file. Your organization may turn this option off.</li>
+        </ol>
+
+        <h2>Get started</h2>
+        <ol>
+            <li>Select <strong>ClipAI</strong> on the <strong>Home</strong> tab. The first time, read the notice about AI and your data, then select <strong>Continue</strong>.</li>
+            <li>In <strong>Settings</strong>, choose a provider and paste your API key. Create a key here:
+                <a href="https://platform.openai.com/api-keys" rel="noopener noreferrer">OpenAI</a>,
+                <a href="https://platform.claude.com/settings/keys" rel="noopener noreferrer">Claude</a>,
+                <a href="https://aistudio.google.com/apikey" rel="noopener noreferrer">Gemini</a>,
+                <a href="https://console.x.ai" rel="noopener noreferrer">Grok</a>.</li>
+            <li>Select <strong>Save</strong>. ClipAI_Word checks the key and loads the models it can use.</li>
+            <li>Optionally choose the model and reasoning effort. Higher effort gives more careful results but is slower and costs more.</li>
+        </ol>
+        <p>You can save keys for several providers and switch between them with the <strong>AI provider</strong> list above the commands.</p>
+
+        <h2>Use it</h2>
+        <h3>Proofread</h3>
+        <p>Select text in your document and choose <strong>Proofread selection</strong>. Grammar, spelling, and punctuation are corrected; meaning and style stay the same.</p>
+        <h3>Rewrite</h3>
+        <p>On the <strong>Rewrite</strong> tab, describe what you want, or pick a style or translation, then choose <strong>Apply instructions</strong> (or press Ctrl+Enter, ⌘Enter on Mac).</p>
+        <h3>Review and undo</h3>
+        <p>The changes are made by AI and can be wrong. Read them before you share the document. To undo, press Ctrl+Z (⌘Z on Mac). While a request is running, you can select <strong>Cancel</strong>; the document is not changed.</p>
+        <h3>What is protected</h3>
+        <ul>
+            <li>Changes that would overwrite pictures, content controls, fields, footnotes, or endnotes are skipped, and ClipAI_Word tells you how many were skipped.</li>
+            <li>When a rewrite changes the number of paragraphs, the selection must not contain tables or any of the items above.</li>
+            <li>You can process up to 4,000 words at a time.</li>
+        </ul>
+
+        <h2>Troubleshooting</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Message or problem</th>
+                    <th scope="col">What to do</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The API key isn’t valid</td>
+                    <td>Copy the key again from your provider account, select <strong>Change</strong>, and paste it. Check that the key belongs to the provider selected in Settings.</td>
+                </tr>
+                <tr>
+                    <td>No credit left or spending limit reached</td>
+                    <td>Add credit or raise the limit in your provider account’s billing settings.</td>
+                </tr>
+                <tr>
+                    <td>Too many requests</td>
+                    <td>Wait a minute and try again, or choose a smaller model.</td>
+                </tr>
+                <tr>
+                    <td>The model isn’t available or can’t be used</td>
+                    <td>Choose another model in Settings. ClipAI_Word needs models that support structured (JSON) responses.</td>
+                </tr>
+                <tr>
+                    <td>Couldn’t connect or the request timed out</td>
+                    <td>Check your connection. On company networks, the firewall must allow <code>api.openai.com</code>, <code>api.anthropic.com</code>, <code>generativelanguage.googleapis.com</code>, or <code>api.x.ai</code>.</td>
+                </tr>
+                <tr>
+                    <td>The selected text changed while processing</td>
+                    <td>Don’t edit the selection until the command finishes, then run it again.</td>
+                </tr>
+                <tr>
+                    <td>The response was cut off, or the selection is too long</td>
+                    <td>Select fewer paragraphs and run the command in parts.</td>
+                </tr>
+                <tr>
+                    <td>The ClipAI button is missing</td>
+                    <td>Restart Word. If it’s still missing, install the add-in again.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Privacy and security</h2>
+        <p>Selected text goes directly from your device to the provider you chose, only when you run a command. API keys stay on your device. ClipAI_Word has no server and collects no data. Read the <a href="privacy.html">privacy policy</a> and the <a href="terms.html">terms of use</a>.</p>
+
+        <h2>Report a problem or inappropriate content</h2>
+        <p>If ClipAI_Word produced harmful, offensive, or inappropriate text, or something doesn’t work, <a href="https://github.com/unbaiat/ircoder/issues/new/choose" rel="noopener noreferrer">open an issue on GitHub</a>. Describe what you did and which provider and model you used, but don’t include API keys or confidential document content. We review every report.</p>
+
+        <h2>Uninstall</h2>
+        <ul>
+            <li><strong>Windows:</strong> run the <a href="uninstall-windows.cmd" download>uninstaller (uninstall-windows.cmd)</a>, then restart Word.</li>
+            <li><strong>Mac:</strong> delete <code>manifest.xml</code> from the <code>wef</code> folder above, then restart Word.</li>
+            <li><strong>Word on the web:</strong> select <strong>Home › Add-ins › More Add-ins › My Add-ins</strong>, open the menu for ClipAI_Word, and select <strong>Remove</strong>.</li>
+        </ul>
+    </main>
+
+    <footer class="site-footer">
+        ClipAI_Word is independent and is not affiliated with or endorsed by Microsoft, OpenAI, Anthropic, Google, or xAI.
+    </footer>
+</body>
+
+</html>
