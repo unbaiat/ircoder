@@ -39,16 +39,21 @@
 
         <h2 id="install">Instalare</h2>
         <h3>Windows</h3>
-        <ol>
-            <li>Descarcă <a href="install-windows.cmd" download>programul de instalare pentru Windows (install-windows.cmd)</a> și deschide-l. Dacă Windows SmartScreen afișează un avertisment, alege <strong>Mai multe informații › Rulează oricum</strong>. Nu ai nevoie de drepturi de administrator.</li>
-            <li>Repornește Word. Apasă <strong>ClipAI</strong> în fila <strong>Pornire</strong>. Dacă nu îl vezi, alege <strong>Pornire › Programe de completare</strong> și selectează ClipAI_Word.</li>
-        </ol>
+        <p>Deschide PowerShell (nu ai nevoie de drepturi de administrator), lipește aceste rânduri și apasă Enter:</p>
+        <pre><code>$dir = "$env:LOCALAPPDATA\ClipAI_Word"
+$key = "HKCU:\Software\Microsoft\Office\16.0\Wef\Developer"
+New-Item -ItemType Directory -Force -Path $dir | Out-Null
+Invoke-WebRequest "https://unbaiat.github.io/ircoder/manifest.xml" -OutFile "$dir\manifest.xml" -UseBasicParsing
+if (-not (Test-Path $key)) { New-Item -Path $key -Force | Out-Null }
+New-ItemProperty -Path $key -Name "bfcdbf3e-b664-4722-be3d-ee13fae01b07" -Value "$dir\manifest.xml" -PropertyType String -Force | Out-Null</code></pre>
+        <p>Sau descarcă <a href="install-windows.cmd" download>programul de instalare pentru Windows (install-windows.cmd)</a> și deschide-l. Dacă Windows SmartScreen afișează un avertisment, alege <strong>Mai multe informații › Rulează oricum</strong>.</p>
+        <p>Apoi repornește Word și apasă <strong>ClipAI</strong> în fila <strong>Pornire</strong>. Dacă nu îl vezi, alege <strong>Pornire › Programe de completare</strong> și selectează ClipAI_Word.</p>
         <h3>Mac</h3>
-        <ol>
-            <li>Salvează <a href="manifest.xml" download>manifestul add-in-ului (manifest.xml)</a>.</li>
-            <li>În Finder, alege <strong>Go › Go to Folder</strong>, introdu <code>~/Library/Containers/com.microsoft.Word/Data/Documents/wef</code> (creează folderul <code>wef</code> dacă nu există) și copiază <code>manifest.xml</code> în el.</li>
-            <li>Repornește Word, apoi alege <strong>Pornire › Programe de completare</strong> și selectează ClipAI_Word.</li>
-        </ol>
+        <p>Deschide Terminal, lipește aceste rânduri și apasă Enter:</p>
+        <pre><code>mkdir -p ~/Library/Containers/com.microsoft.Word/Data/Documents/wef
+curl -fsSL https://unbaiat.github.io/ircoder/manifest.xml -o ~/Library/Containers/com.microsoft.Word/Data/Documents/wef/bfcdbf3e-b664-4722-be3d-ee13fae01b07.manifest.xml</code></pre>
+        <p>Sau manual: salvează <a href="manifest.xml" download>manifestul add-in-ului (manifest.xml)</a>, apoi în Finder alege <strong>Go › Go to Folder</strong> și introdu <code>~/Library/Containers/com.microsoft.Word/Data/Documents/wef</code> (creează folderul <code>wef</code> dacă nu există). Copiază fișierul acolo și redenumește-l <code>bfcdbf3e-b664-4722-be3d-ee13fae01b07.manifest.xml</code>.</p>
+        <p>Apoi repornește Word, alege <strong>Pornire › Programe de completare</strong> și selectează ClipAI_Word.</p>
         <h3>Word pe web</h3>
         <ol>
             <li>Salvează <a href="manifest.xml" download>manifestul add-in-ului (manifest.xml)</a>.</li>
@@ -135,7 +140,7 @@
         <h2>Dezinstalare</h2>
         <ul>
             <li><strong>Windows:</strong> rulează <a href="uninstall-windows.cmd" download>programul de dezinstalare (uninstall-windows.cmd)</a>, apoi repornește Word.</li>
-            <li><strong>Mac:</strong> șterge <code>manifest.xml</code> din folderul <code>wef</code> de mai sus, apoi repornește Word.</li>
+            <li><strong>Mac:</strong> șterge <code>bfcdbf3e-b664-4722-be3d-ee13fae01b07.manifest.xml</code> din folderul <code>wef</code> de mai sus, apoi repornește Word.</li>
             <li><strong>Word pe web:</strong> alege <strong>Pornire › Programe de completare › Mai multe programe de completare › Programele mele de completare</strong>, deschide meniul pentru ClipAI_Word și alege <strong>Eliminare</strong>.</li>
         </ul>
     </main>

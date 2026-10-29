@@ -39,16 +39,21 @@
 
         <h2 id="install">Install</h2>
         <h3>Windows</h3>
-        <ol>
-            <li>Download the <a href="install-windows.cmd" download>Windows installer (install-windows.cmd)</a> and open it. If Windows SmartScreen warns you, select <strong>More info › Run anyway</strong>. No administrator rights are needed.</li>
-            <li>Restart Word. Select <strong>ClipAI</strong> on the <strong>Home</strong> tab. If you don’t see it, select <strong>Home › Add-ins</strong> and choose ClipAI_Word.</li>
-        </ol>
+        <p>Open PowerShell (no administrator rights needed), paste these lines, and press Enter:</p>
+        <pre><code>$dir = "$env:LOCALAPPDATA\ClipAI_Word"
+$key = "HKCU:\Software\Microsoft\Office\16.0\Wef\Developer"
+New-Item -ItemType Directory -Force -Path $dir | Out-Null
+Invoke-WebRequest "https://unbaiat.github.io/ircoder/manifest.xml" -OutFile "$dir\manifest.xml" -UseBasicParsing
+if (-not (Test-Path $key)) { New-Item -Path $key -Force | Out-Null }
+New-ItemProperty -Path $key -Name "bfcdbf3e-b664-4722-be3d-ee13fae01b07" -Value "$dir\manifest.xml" -PropertyType String -Force | Out-Null</code></pre>
+        <p>Or download the <a href="install-windows.cmd" download>Windows installer (install-windows.cmd)</a> and open it. If Windows SmartScreen warns you, select <strong>More info › Run anyway</strong>.</p>
+        <p>Then restart Word and select <strong>ClipAI</strong> on the <strong>Home</strong> tab. If you don’t see it, select <strong>Home › Add-ins</strong> and choose ClipAI_Word.</p>
         <h3>Mac</h3>
-        <ol>
-            <li>Save the <a href="manifest.xml" download>add-in manifest (manifest.xml)</a>.</li>
-            <li>In Finder, select <strong>Go › Go to Folder</strong>, enter <code>~/Library/Containers/com.microsoft.Word/Data/Documents/wef</code> (create the <code>wef</code> folder if it doesn’t exist), and copy <code>manifest.xml</code> into it.</li>
-            <li>Restart Word, then select <strong>Home › Add-ins</strong> and choose ClipAI_Word.</li>
-        </ol>
+        <p>Open Terminal, paste these lines, and press Enter:</p>
+        <pre><code>mkdir -p ~/Library/Containers/com.microsoft.Word/Data/Documents/wef
+curl -fsSL https://unbaiat.github.io/ircoder/manifest.xml -o ~/Library/Containers/com.microsoft.Word/Data/Documents/wef/bfcdbf3e-b664-4722-be3d-ee13fae01b07.manifest.xml</code></pre>
+        <p>Or do it by hand: save the <a href="manifest.xml" download>add-in manifest (manifest.xml)</a>, then in Finder select <strong>Go › Go to Folder</strong> and enter <code>~/Library/Containers/com.microsoft.Word/Data/Documents/wef</code> (create the <code>wef</code> folder if it doesn’t exist). Copy the file there and rename it to <code>bfcdbf3e-b664-4722-be3d-ee13fae01b07.manifest.xml</code>.</p>
+        <p>Then restart Word, select <strong>Home › Add-ins</strong>, and choose ClipAI_Word.</p>
         <h3>Word on the web</h3>
         <ol>
             <li>Save the <a href="manifest.xml" download>add-in manifest (manifest.xml)</a>.</li>
@@ -135,7 +140,7 @@
         <h2>Uninstall</h2>
         <ul>
             <li><strong>Windows:</strong> run the <a href="uninstall-windows.cmd" download>uninstaller (uninstall-windows.cmd)</a>, then restart Word.</li>
-            <li><strong>Mac:</strong> delete <code>manifest.xml</code> from the <code>wef</code> folder above, then restart Word.</li>
+            <li><strong>Mac:</strong> delete <code>bfcdbf3e-b664-4722-be3d-ee13fae01b07.manifest.xml</code> from the <code>wef</code> folder above, then restart Word.</li>
             <li><strong>Word on the web:</strong> select <strong>Home › Add-ins › More Add-ins › My Add-ins</strong>, open the menu for ClipAI_Word, and select <strong>Remove</strong>.</li>
         </ul>
     </main>

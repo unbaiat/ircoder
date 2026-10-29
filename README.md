@@ -11,8 +11,25 @@ You need your own API key from one of the providers. The provider bills the usag
 
 ## Install
 
-- **Windows:** download and run [install-windows.cmd](https://unbaiat.github.io/ircoder/install-windows.cmd), then restart Word.
-- **Mac and Word on the web:** see the [help page](https://unbaiat.github.io/ircoder/support.html#install).
+**Windows:** paste this into PowerShell (no administrator rights needed), then restart Word. You can also run [install-windows.cmd](https://unbaiat.github.io/ircoder/install-windows.cmd) instead.
+
+```powershell
+$dir = "$env:LOCALAPPDATA\ClipAI_Word"
+$key = "HKCU:\Software\Microsoft\Office\16.0\Wef\Developer"
+New-Item -ItemType Directory -Force -Path $dir | Out-Null
+Invoke-WebRequest "https://unbaiat.github.io/ircoder/manifest.xml" -OutFile "$dir\manifest.xml" -UseBasicParsing
+if (-not (Test-Path $key)) { New-Item -Path $key -Force | Out-Null }
+New-ItemProperty -Path $key -Name "bfcdbf3e-b664-4722-be3d-ee13fae01b07" -Value "$dir\manifest.xml" -PropertyType String -Force | Out-Null
+```
+
+**Mac:** paste this into Terminal, then restart Word.
+
+```bash
+mkdir -p ~/Library/Containers/com.microsoft.Word/Data/Documents/wef
+curl -fsSL https://unbaiat.github.io/ircoder/manifest.xml -o ~/Library/Containers/com.microsoft.Word/Data/Documents/wef/bfcdbf3e-b664-4722-be3d-ee13fae01b07.manifest.xml
+```
+
+**Word on the web:** see the [help page](https://unbaiat.github.io/ircoder/support.html#install).
 
 ## Privacy in short
 
